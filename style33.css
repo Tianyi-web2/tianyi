@@ -1,0 +1,915 @@
+
+@import url('https://fonts.googleapis.com/css?family=Anton|Josefin+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lobster&display=swap');
+
+
+
+
+* {
+   margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+
+
+/*==== index33====*/
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+}
+
+.column img {
+    margin-top: 8px;
+    vertical-align: middle;
+	width:100%;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media (max-width: 800px) {
+	.column {
+        flex: 50%;
+        max-width: 50%;
+    }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media (max-width: 600px) {
+    .column {
+        flex: 100%;
+        max-width: 100%;
+    }
+}
+
+.text-block {
+  position: absolute;
+  bottom: 300px;
+  right: 500px;
+  background-color: #744E3A;
+  background: rgba(139, 105, 93, 0.6);
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  animation:shadow-pop-tr 1.2s;
+}
+
+.text-block p{
+  color: white;  
+  font-size: 75px;
+  font-family: 'Lobster', cursive;
+    
+}
+
+
+@-webkit-keyframes shadow-pop-tr {
+  0% {
+    -webkit-box-shadow: 0 0 #D7CBC0, 0 0 #D7CBC0, 0 0 #D7CBC0, 0 0 #D7CBC0, 0 0 #D7CBC0, 0 0 #D7CBC0, 0 0 #D7CBC0, 0 0 #D7CBC0;
+            box-shadow: 0 0 #D7CBC0, 0 0 #D7CBC0, 0 0 #D7CBC0, 0 0 #D7CBC0, 0 0 #D7CBC0, 0 0 #D7CBC0, 0 0 #D7CBC0, 0 0 #D7CBC0;
+    -webkit-transform: translateX(0) translateY(0);
+            transform: translateX(0) translateY(0);
+  }
+  100% {
+    -webkit-box-shadow: 1px -1px #D7CBC0, 2px -2px #D7CBC0, 3px -3px #D7CBC0, 4px -4px #D7CBC0, 5px -5px #D7CBC0, 6px -6px #D7CBC0, 7px -7px #D7CBC0, 8px -8px #D7CBC0;
+            box-shadow: 1px -1px #D7CBC0, 2px -2px #D7CBC0, 3px -3px #D7CBC0, 4px -4px #D7CBC0, 5px -5px #D7CBC0, 6px -6px #D7CBC0, 7px -7px #D7CBC0, 8px -8px #D7CBC0;
+    -webkit-transform: translateX(-8px) translateY(8px);
+            transform: translateX(-8px) translateY(8px);
+  }
+}
+@keyframes shadow-pop-tr {
+  0% {
+    -webkit-box-shadow: 0 0 #D7CBC0, 0 0 #D7CBC0, 0 0 #D7CBC0, 0 0 #D7CBC0, 0 0 #D7CBC0, 0 0 #D7CBC0, 0 0 #D7CBC0, 0 0 #D7CBC0;
+            box-shadow: 0 0 #D7CBC0, 0 0 #D7CBC0, 0 0 #D7CBC0, 0 0 #D7CBC0, 0 0 #D7CBC0, 0 0 #D7CBC0, 0 0 #D7CBC0, 0 0 #D7CBC0;
+    -webkit-transform: translateX(0) translateY(0);
+            transform: translateX(0) translateY(0);
+  }
+  100% {
+    -webkit-box-shadow: 1px -1px #D7CBC0, 2px -2px #D7CBC0, 3px -3px #D7CBC0, 4px -4px #D7CBC0, 5px -5px #D7CBC0, 6px -6px #D7CBC0, 7px -7px #D7CBC0, 8px -8px #D7CBC0;
+            box-shadow: 1px -1px #D7CBC0, 2px -2px #D7CBC0, 3px -3px #D7CBC0, 4px -4px #D7CBC0, 5px -5px #D7CBC0, 6px -6px #D7CBC0, 7px -7px #D7CBC0, 8px -8px #D7CBC0;
+    -webkit-transform: translateX(-8px) translateY(8px);
+            transform: translateX(-8px) translateY(8px);
+  }
+}
+
+.text-block {
+	-webkit-animation: shadow-pop-tr 0.3s cubic-bezier(0.470, 0.000, 0.745, 0.715) forwards;
+    animation: shadow-pop-tr 0.3s cubic-bezier(0.470, 0.000, 0.745, 0.715) forwards;}
+
+
+
+/* ==== flex_media ==== */
+
+/*=mobile first=*/
+
+nav {
+   /*background: #fff;*/
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: 
+    /*justify-content: flex-end;*/
+}
+
+nav a:link{
+   padding: 20px;
+   flex-grow: 1;
+   color: gray;
+    background: rgba(256, 256, 256, 0.75);
+    text-decoration: none;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    font-size: 16px;
+    transition: all 0.3s;
+   
+}
+
+
+nav a:vistied{
+    color: beige;
+    
+}
+
+nav a:hover{
+    color: #fff;
+    background: none;
+   
+}
+
+section#parent {
+    width: 100%;
+    min-height: 100vh;
+    height: auto;
+    border: solid 10px #744E3A;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+
+#parent article {
+    width: 100%;
+    border:solid 10px #BD8D5D;
+    font-family: Gothem, Helvetica, "san-serif";
+    color:#fff; 
+    padding: 20px;
+    background:url(../image/Raffaello_Spozalizio.jpg) center center;
+}
+
+#parent h1 {
+    font-size:42px;
+    height: 300px;
+    line-height: 300px;
+    text-align: center;
+}
+
+#parent article p {
+    font-size:16px;
+    line-height: 22px;
+    
+}   
+
+.multi{
+    border: solid 20px #8B695D;
+    background: url(../image/how-to-texture-walls-step-2.jpg);
+    background-size: cover;
+} 
+
+.multi article{
+    padding: 20px;
+}
+
+.multi article h1 {
+    font-size: 30px;
+    font-family: 'Anton', sans-serif;
+    color: #744E3A;
+}
+
+.multi article p {
+    font-size:16px;
+    line-height: 22px; 
+    margin-bottom: 20px;
+    font-family: 'Josefin Sans', sans-serif;
+    color: #744E3A;
+}
+
+
+
+
+/*=tablet layout=*/
+
+/* 600px to 980px, inherits styles from mobile layout*/
+
+
+@media only screen and (min-width:769px) {
+    #parent article {
+         width:50%;
+    }
+    
+    #parent article div {
+        margin: 80px;
+    }
+    
+    #parent article h1{
+         font-size:70px;
+         height: 500px;
+         line-height: 500px;
+         text-align: center;
+    }
+    
+    #parent article p {
+         font-size: 24px;
+         text-align: center;
+         line-height: 30px;
+    }
+    
+    .multi article{
+        column-count: 2;
+        column-gap: 20px;
+    
+}
+}
+
+/*always write the intire code, of yout have any divce smaller than 769px use the media (for phone), if bigger than 769px use the code in {} after @media*/
+
+
+
+
+/*===destop layout===*/
+@media only screen and (min-width: 1024px) {
+    #parent article{
+        width:33.333333333%;  
+    }
+    
+   #parent h1 {
+    font-size:42px;
+}
+     .multi article{
+        column-count: 3;
+        column-gap: 20px;
+    
+}
+    
+}
+
+
+
+
+
+/* ==== flow ==== */
+
+nav {
+   /*background: #fff;*/
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: 
+    /*justify-content: flex-end;*/
+}
+
+nav a:link{
+   padding: 20px;
+   flex-grow: 1;
+   color: gray;
+    background: rgba(256, 256, 256, 0.75);
+    text-decoration: none;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    font-size: 16px;
+    transition: all 0.3s;
+   
+}
+
+
+nav a:vistied{
+    color: beige;
+    
+}
+
+nav a:hover{
+    color: #fff;
+    background: none;
+   
+}
+
+
+#trans {
+    width: 100%;
+    min-height: 100vh;
+    height: auto;
+    background: url(../image/papertexture.jpg) center center;
+    background-size: cover;
+    padding: 20px;
+    border-top: solid 20px #F1E2BB;
+    
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    
+    
+}
+
+#trans figure {
+    width: 300px;
+    height: 400px;
+    margin: 20px;
+    transition: all  .3s;
+    color: white;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    
+}
+
+#trans figure:hover {
+    box-shadow: 4px 4px 0 rgba(0,0,0, .4);
+}
+
+#f1 {
+    background: url(../image/Leonardo_Da_Vinci_-_Vergine_delle_Rocce.jpg) no-repeat center left;  
+}
+
+#f1:hover {
+    background: url(../image/Leonardo_Da_Vinci_-_Vergine_delle_Rocce.jpg) no-repeat center center;  
+}
+
+/* hover----animation--move to right*/
+
+
+#f2 {
+    background: url(../image/2.jpg) no-repeat center center;  
+}
+#f2:hover {
+    background: url(../image/2.jpg) no-repeat center top;  
+}
+
+
+
+
+#f3 {
+    background: url(../image/Mona_Lisa.jpg) no-repeat center left;  
+}
+#f3:hover {
+    background: url(../image/Mona_Lisa.jpg) no-repeat center top;  
+}
+
+
+
+
+figure h2 {
+    font-family: helvetica, gotham, sans-serif; 
+    font-size: 42px;
+    text-shadow: 0 0 20px rgba(0,0,0, .5);
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    transition: all 2s;
+}
+
+figure:hover h2 {
+    top: 120px;
+}
+
+/* change the h2 inside the hover*/
+
+figure figcaption {
+    background-color: rgba(0,0,0,.6);
+    padding: 20px;
+    font-family: georgia, serif;
+    font-style: italic;
+    text-align: left;
+    position: absolute;
+    left: 0;
+    bottom: -200px;
+    transition: all .3s .2s;
+    /* second value of transition (.2s) for a delay*/
+    
+}
+
+figure:hover figcaption {
+    bottom: 0;
+}
+
+
+/*=CSS Animation Example=*/
+
+.leo {
+    background: url(../image/LeonardodaVinci.jpg) no-repeat center center;
+    background-size: cover;   
+}
+
+
+.leo h1{
+    font-family: helvetica, gotham, sans-serif; 
+    font-size: 72px;
+    position: relative;
+    animation: slider 2s;
+    color: #fff;
+    left:160px;
+}
+
+@keyframes slider {
+    from {opacity: 0;left:200px;}
+    to {opacity:1;left: 160px;}
+}
+/* that's how you do a animation easy way (tell the beginning point and the end point) */
+
+
+
+
+
+/* ==== video ===== */
+
+@media (min-width: 320px) and (max-width: 480px) {
+#bgvid{
+    position: fixed;
+    left:50%;
+    top: 50%;   
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100vh;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    }
+
+header {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+hgroup{
+    text-align: center;
+    color: #F1E2BB;  
+}
+
+hgroup h1{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    font-size: 5vmax; 
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.75);
+}
+
+h1 span{
+    color: #BD8D5D;
+}
+
+
+#s2 {
+        background: url(../image/david.jpg);
+        background-size: cover;
+    }
+    
+
+nav {
+   /*background: #fff;*/
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: 
+    /*justify-content: flex-end;*/
+}
+
+nav a:link{
+   padding: 20px;
+   flex-grow: 1;
+   color: gray;
+    background: rgba(256, 256, 256, 0.75);
+    text-decoration: none;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    font-size: 16px;
+    transition: all 0.3s;
+   
+}
+
+
+nav a:vistied{
+    color: beige;
+    
+}
+
+nav a:hover{
+    color: #fff;
+    background: none;
+   
+}
+
+#s2 article{
+    position: fixed;
+    width:30%;
+    background: white;
+    padding: 15px;
+    margin:10px;
+    right:10px;
+    top: 80px;
+    font-size: 9.5px;
+    }
+    
+}
+
+
+
+ @media (min-width:768px) and (max-width: 1024px)  {
+#bgvid{
+    position: fixed;
+    left:50%;
+    top: 50%;   
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100vh;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    }
+
+header {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+hgroup{
+    text-align: center;
+    color: #F1E2BB;  
+}
+
+hgroup h1{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    font-size: 8vmax; 
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.75);
+}
+
+h1 span{
+    color: #BD8D5D;
+}
+
+
+nav {
+   /*background: #fff;*/
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: 
+    /*justify-content: flex-end;*/
+}
+
+nav a:link{
+   padding: 20px;
+   flex-grow: 1;
+   color: gray;
+    background: rgba(256, 256, 256, 0.75);
+    text-decoration: none;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    font-size: 16px;
+    transition: all 0.3s;
+   
+}
+
+
+nav a:vistied{
+    color: beige;
+    
+}
+
+nav a:hover{
+    color: #fff;
+    background: none;
+   
+}
+
+#s2 article{
+    position: fixed;
+    width:40%;
+    background: white;
+    padding: 25px;
+    margin:10px;
+    right:10px;
+    top:130px;
+    font-size: 20px;   
+}
+}
+
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+    
+    bgvid{
+    position: fixed;
+    left:50%;
+    top: 50%;   
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100vh;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    }
+
+header {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+hgroup{
+    text-align: center;
+    color: #F1E2BB;  
+}
+
+hgroup h1{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    font-size: 8vmax; 
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.75);
+}
+
+h1 span{
+    color: #BD8D5D;
+}
+
+
+#s2 {
+        background: url(../image/david.jpg);
+        background-size: cover;
+    }
+
+
+nav {
+   /*background: #fff;*/
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: 
+    /*justify-content: flex-end;*/
+}
+
+nav a:link{
+   padding: 20px;
+   flex-grow: 1;
+   color: gray;
+    background: rgba(256, 256, 256, 0.75);
+    text-decoration: none;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    font-size: 16px;
+    transition: all 0.3s;
+   
+}
+
+
+nav a:vistied{
+    color: beige;
+    
+}
+
+nav a:hover{
+    color: #fff;
+    background: none;
+   
+}
+
+#s2 article{
+    position: fixed;
+    width:30%;
+    background: white;
+    padding: 15px;
+    margin:10px;
+    right:10px;
+    top: 80px;
+    font-size: 9.5px;
+    }
+    
+}
+
+
+
+ @media (min-width:768px) and (max-width: 1024px)  {
+#bgvid{
+    position: fixed;
+    left:50%;
+    top: 50%;   
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100vh;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    }
+
+header {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+hgroup{
+    text-align: center;
+    color: #F1E2BB;  
+}
+
+hgroup h1{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    font-size: 6vmax; 
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.75);
+}
+
+h1 span{
+    color: #BD8D5D;
+}
+
+
+#s2 {
+        background: url(../image/david.jpg);
+        background-size: cover;
+    }     
+     
+
+nav {
+   /*background: #fff;*/
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: 
+    /*justify-content: flex-end;*/
+}
+
+nav a:link{
+   padding: 20px;
+   flex-grow: 1;
+   color: gray;
+    background: rgba(256, 256, 256, 0.75);
+    text-decoration: none;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    font-size: 16px;
+    transition: all 0.3s;
+   
+}
+
+
+nav a:vistied{
+    color: beige;
+    
+}
+
+nav a:hover{
+    color: #fff;
+    background: none;
+   
+}
+    
+    #s2 article{
+    position: fixed;
+    width:40%;
+    background: white;
+    padding: 25px;
+    margin:10px;
+    right:10px;
+    top:130px;
+    font-size: 20px;   
+}
+    
+}
+
+
+
+
+@media (min-width: 1024px) and (max-width: 2000px) {
+
+#bgvid{
+    position: fixed;
+    left:50%;
+    top: 50%;   
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100vh;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    }
+
+header {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+hgroup{
+    text-align: center;
+    color: #F1E2BB;  
+}
+
+hgroup h1{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    font-size: 6vmax; 
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.75);
+}
+
+h1 span{
+    color: #BD8D5D;
+}
+
+
+#s2 article {
+        background:url(../image/david.jpg);
+    }    
+    
+
+nav {
+   /*background: #fff;*/
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: 
+    /*justify-content: flex-end;*/
+}
+
+nav a:link{
+   padding: 20px;
+   flex-grow: 1;
+   color: gray;
+    background: rgba(256, 256, 256, 0.75);
+    text-decoration: none;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    font-size: 16px;
+    transition: all 0.3s;
+   
+}
+
+
+nav a:vistied{
+    color: beige;
+    
+}
+
+nav a:hover{
+    color: #fff;
+    background: none;
+   
+}
+    
+    #s2 article{
+    position: fixed;
+    width:40%;
+    background: white;
+    padding: 25px;
+    margin:10px;
+    right:10px;
+    top:130px;
+    font-size: 20px;   
+}
+    
+}
+
+
+
+
